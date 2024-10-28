@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock-paper-scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a093500860.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="score">
+        <span><h1 class="you" >you : </h1>
+        <h2 id="yourscore"></h2></span>
+        <span><h1 class="him" >robot : </h1>
+        <h2 id="robotscore"></h2></span>
+        <script>
+            const yourscore = document.getElementById('yourscore')
+            const robotscore= document.getElementById('robotscore')
+        </script>
+    </div>
+    <div class="container">
+        <h1>Rock Paper Scissor Against Robot</h1>
+        <span class="icon">
+            <i class="fa-solid fa-robot"></i>
+        </span>
+        <div class="robot-section">
+            <h3>robot : </h3>
+            <h3 class="robot rockai" id="rock" style="display: none;" ><i class="fa-regular fa-hand-back-fist"></i></h3>
+            <h3 class="robot paperai" id="paper" style="display: none;" ><i class="fa-regular fa-hand"></i></h3>
+            <h3 class="robot scissorai" id="scissor" style="display: none;"><i class="fa-regular fa-hand-scissors"></i></h3>
+            <script>
+                const micro = document.querySelectorAll('.robot')
+               
+            </script>
+        </div>
+        <div class="user">
+            <h3  id="choose" class="choose">choose one :</h3>
+        <div class="choices" >
+            <a class="rock c" onclick="choice('rock')" ><i class="fa-regular fa-hand-back-fist"></i></a>
+            <a class="paper c"  onclick="choice('paper')"><i class="fa-regular fa-hand"></i></a>
+            <a class="scissor c"  onclick="choice('scissor')"><i class="fa-regular fa-hand-scissors"></i></a>
+        </div>
+        <div class="result-section">
+            <h3 id="result" ></h3>
+        </div>
+        </div>
+          <script>
+            const result = document.getElementById('result')
+            result.textContent = message
+          </script>
+          <button id="again" onclick="repeat()" style="display: none;" ><span><i class="fa-solid fa-rotate-right"></i>play again</span></button>
+          
+    </div>
+</body>
+</html>
